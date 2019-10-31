@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">        
+        <title>Caring For Your Pet</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(#0798c4, #007da2);">
+                <a class="navbar-brand" href="#" style="color:#fcfdfe; font-family: 'Satisfy', cursive; font-size:20px;">Ruff 'n Snuggle</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/caring" style="color:#fcfdfe; font-family: 'Didact Gothic', sans-serif; font-size:16px;" >Caring For Your Pet&nbsp;</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fcfdfe;font-family: 'Didact Gothic', sans-serif; font-size:16px;">
+                            All Animals&nbsp;
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="/all_dogs" style="font-family: 'Didact Gothic', sans-serif; font-size:14px;">Dogs</a>
+                                <a class="dropdown-item" href="/all_cats" style="font-family: 'Didact Gothic', sans-serif; font-size:14px;">Cats</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/game/home" style="color:#fcfdfe; font-family: 'Didact Gothic', sans-serif; font-size:16px; width:200px;" >Find your perfect match!&nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard" style="color:#fcfdfe; font-family: 'Didact Gothic', sans-serif; font-size:16px; width:200px;" >Dashboard&nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" style="font-size:16px; color:white; margin-left:190px; font-family: 'Didact Gothic', sans-serif; font-size:16px;">Welcome {{user.first_name}}!&nbsp;</a>
+                        </li>
+                        <form class="form-inline mt-2 mt-md-0" action="/logout">
+                            <button class="btn btn-sm btn-outline-light my-2 my-sm-0" type="submit" style="font-family: 'Didact Gothic', sans-serif; font-size:12px;">Sign Out</button>
+                        </form>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 style="font-family: 'Satisfy', cursive; font-size:55px; margin-top: 15px; text-align:center">Dogs</h1>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">*Information borrowed from <a href="https://www.humanesociety.org/resources/bringing-your-new-dog-home" style="color: #0798c4;">The Humane Society of the United States</a>. The key to helping your new dog make a successful adjustment to your home is being prepared and being patient. It can take anywhere from two days to two months for you and your pet to adjust to each other. The following tips can help ensure a smooth transition.</p>
+
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Gather supplies</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Prepare the things your dog will need in advance. You'll need a collar and leash, food and water bowls, food, and, of course, some toys. And don't forget to order an identification tag right away.</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Establish house rules</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Work out your dog-care regimen in advance among the human members of your household. Who will walk the dog first thing in the morning? Who will feed them at night? Will they be allowed on the couch, or won't he? Where will they rest at night? Are there any rooms in the house that are off-limits?</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Plan the arrival</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Try to arrange the arrival of your new dog for a weekend or when you can be home for a few days. Get to know each other and spend some quality time together. Don't forget the jealousy factor — make sure you don't neglect other pets and people in your household!</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Prepare for housetraining</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Assume your new dog is not housetrained and work from there. Read over the housetraining information given to you at the time of adoption and check out our housetraining tips for adult dogs. Be consistent, and maintain a routine. A little extra effort on your part to come home straight from work each day will pay off in easier, faster housetraining.</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Ensure all pets are healthy</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Animal shelters take in animals with widely varying backgrounds, some of whom have not been previously vaccinated. Inevitably, despite the best efforts of shelter workers, viruses can be spread and may occasionally go home with adopted animals. If you already have dogs or cats at home, make sure they are up-to-date on their shots and in good general health before introducing your new pet dog.</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Give them a crate</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">A crate may look to you like the canine equivalent of a jail cell, but to your dog, who instinctively likes to den, it's a room of their own. It makes housetraining and obedience-training easier and saves your dog from the headache of being yelled at unnecessarily for problem behavior. Of course, you won't want to crate your dog all day or all night, or they will consider it a jail cell. Just a few hours a day should be sufficient.</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Use training and discipline to<br> create a happy home</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Dogs need order. Let your pet know from the start who is the boss. When you catch them doing something they shouldn't, don't lose your cool. Stay calm, and let them know immediately, in a loud and disapproving voice, that they have misbehaved. Reward them with praise when they do well, too! Sign up for a local dog obedience class, and you'll learn what a joy it is to have a well-trained dog.</p>
+
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Let the games begin</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Dogs need an active life. That means you should plan plenty of exercise and game time for your pet. Enjoy jogging or Frisbee? You can bet your dog will, too. If running around the park is too energetic for your taste, try throwing a ball or a stick, or just going for a long walk together. When you take a drive in the country or visit family and friends, bring your dog and a leash along.</p>
+                    
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">Patience is key</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Finally, remember to temper your expectations. Life with you is a different experience for your new companion, so give them time to adjust. You'll soon find out that you've made a friend for life. No one will ever greet you with as much enthusiasm or provide you with as much unqualified love and loyalty as your dog will. Be patient, and you will be amply rewarded.</p>
+                </div>
+                <hr style="width:1px; height: 1800px; background-image: linear-gradient(#0798c4, #007da2, #0798c4)">
+                <div class="col">
+                    <h1 style="font-family: 'Satisfy', cursive; font-size:55px; margin-top: 15px; text-align:center;">Cats</h1>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">*Information borrowed from <a href="https://www.humanesociety.org/resources/how-help-frightened-cat" style="color: #0798c4;">The Humane Society of the United States</a>. Every cat is different, so each is frightened by different things. Every cat has his own way of responding to fear, too.</p>
+
+                    <p style="font-family: 'Didact Gothic', sans-serif;">A naturally timid cat may be afraid of many things and spend a lot of her life in hiding, while a naturally confident cat will be less fearful and will usually recover more quickly from scary events.</p>
+
+                    <p style="font-family: 'Didact Gothic', sans-serif;">For example, one cat may confront a strange dog by hissing, spitting, and puffing out his fur to make himself look big. Or he may decide to cut his losses and beat a hasty retreat. Some cats are so overwhelmed with fear that they simply freeze, too terrified to run. A really laid-back cat, on the other hand, may not see the dog as a threat; he may simply sniff the dog and walk away.</p>
+
+                    <p style="font-family: 'Didact Gothic', sans-serif;">How do you know if your cat is afraid?
+                    Your cat might show the following behaviors when she's afraid:</p>
+
+                    <p style="font-family: 'Didact Gothic', sans-serif;">
+                        <ul>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">Running away</li>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">Hiding</li>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">Aggression (which includes spitting, hissing, growling, swatting, biting, scratching, puffing fur and tail, arching back, swishing tail and flattening ears)</li>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">Freezing in place</li>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">Losing control of bladder/bowels</li>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">eleasing anal glands</li>
+                            <li style="font-family: 'Didact Gothic', sans-serif;">Refusing to use the litter box</li>
+                        </ul>
+                    </p>
+
+
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">What are common fear triggers?</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">You'll need to observe your cat carefully to determine the reasons for his fearful behavior. Here are some common triggers:</p>
+                    <ul>
+                        <li style="font-family: 'Didact Gothic', sans-serif;">A loud noise or a quick movement</li>
+                        <li style="font-family: 'Didact Gothic', sans-serif;"> strange environment</li>
+                        <li style="font-family: 'Didact Gothic', sans-serif;">A strange person or animal</li>
+                        <li style="font-family: 'Didact Gothic', sans-serif;">An active child</li>
+                        <li style="font-family: 'Didact Gothic', sans-serif;">A stressful event, such as a move or a trip to the vet</li>
+                    </ul>
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">What fearful behavior is normal?</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Some fearful behaviors are acceptable and normal. For example, most cats will feel insecure or frightened in a new environment. Often, your cat will hide for a day or two when introduced to a new home.</p>
+                    
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Sometimes a traumatic experience—such as taking him to the veterinarian or bringing a new animal into the home—can disrupt her routine and send her under the bed for a few days.</p>
+
+                    <p style="font-family: 'Didact Gothic', sans-serif;">But some cats are so fearful that they seem to live in a near-constant state of anxiety, or they may redirect their fear into aggression toward people or other pets.</p>
+
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">How can you help your scared cat?</h3>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">Here are some basics:</p>
+                    <ul>
+                    <li style="font-family: 'Didact Gothic', sans-serif;">If your cat is hiding but healthy, leave him alone. He'll come out when he's ready. Forcing him out of his hiding spot will only make him more fearful. Make sure he has easy access to food, water and a litter box. Clean the litter box and change the food and water every day so you know whether he's eating and drinking.</li>
+
+                    <li style="font-family: 'Didact Gothic', sans-serif;">Food is a great motivator for cats, so if yours is afraid of someone in the house, give that person feeding duty.</li>
+
+                    <h3 style="font-family: 'Alegreya Sans SC', sans-serif; text-align:right;">What should you do if your cat becomes aggressive?</h3>
+                    <ul>
+                    <p style="font-family: 'Didact Gothic', sans-serif;">
+                        <li style="font-family: 'Didact Gothic', sans-serif;">If your cat seriously threatens you, another person, or another pet—and the behavior isn't an isolated incident—you should seek help as soon as possible from a cat behavior specialist.</li>
+                    <li style="font-family: 'Didact Gothic', sans-serif;">To keep everyone safe in the meantime, confine your cat to an area of the house where you can keep all interactions with her to a minimum and have a responsible person supervise her.</li>
+                    <li style="font-family: 'Didact Gothic', sans-serif;">Treat all cat bites and scratches seriously; remember that they can easily become infected.</li></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

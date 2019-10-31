@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    {% load static %}	
+    
+    <link rel="stylesheet" href="{% static 'app_1/css/stylesheet.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+
+
+    <style>
+
+    </style>
+
+</head>
+<div class='box'>
+<div style='display: inline-block; margin: 20px 30px 30px 30px;'>
+    <button id='/game/{{animal}}/1'><img src = "{% static 'app_1/images/sizesprite.png'%}" style='width: 30px;'></button>
+</div>
+
+<div style='display: inline-block; margin: 20px 30px 30px 30px;'>
+    <button id='/game/{{animal}}/2'><img src = "{% static 'app_1/images/sizesprite.png'%}" style='width: 50px;'></button>
+</div>
+
+<div style='display: inline-block; margin: 20px 30px 30px 30px;'>
+    
+    <button id='/game/{{animal}}/3'><img src = "{% static 'app_1/images/sizesprite.png'%}" style='width: 70px;'></button>
+</div>
+
+<div class=talk>
+        <p>Nice! a {{animal}} is a great choice!  How big should they be?</p>
+</div>

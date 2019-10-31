@@ -1,0 +1,13 @@
+.picture_container {
+    margin-right: 5px; 
+    margin-top:5px;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    height: 235px;
+    display: inline-block;
+}
+
+.row{
+    margin-left: 75px;
+}

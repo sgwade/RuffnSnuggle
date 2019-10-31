@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Login & Register</title>
+<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+</head>
+<body style="background-color:#0084ab">
+    <div class="signup-form">
+        <div class="col-xs-4 col-lg-offset-2" style="background-color:#fcfdfe; border-top-left-radius: 5px; border-bottom-left-radius: 5px; height: 548px">
+        <form action="/register_process" method="post" >
+            {% csrf_token %}
+            <h2 style="text-align:center; font-family: 'Satisfy', cursive;">Register</h2>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        {% if messages %}
+                            {% for message in messages %}
+                            {% if message.extra_tags == "first_name" %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                            {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        <h5 style="font-family: 'Didact Gothic', sans-serif;">First name:</h5><input type="text" class="form-control" name="first_name"></div>
+                    <div class="col-xs-6">
+                            {% if messages %}
+                            {% for message in messages %}
+                            {% if message.extra_tags == "last_name" %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                            {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        <h5 style="font-family: 'Didact Gothic', sans-serif; font-size:14px;">Last name:</h5><input type="text" class="form-control" name="last_name"></div>
+                </div>        	
+            </div>
+            <div class="form-group">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.extra_tags == "email" %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                    {% endif %}
+                    {% endfor %}
+                {% endif %}
+                <h5 style="font-family: 'Didact Gothic', sans-serif;">Email:</h5><input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.extra_tags == "password" %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                    {% endif %}
+                    {% endfor %}
+                {% endif %}
+                <h5 style="font-family: 'Didact Gothic', sans-serif;">Password:</h5><input type="password" class="form-control" name="password">
+            </div>
+            <div class="form-group">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.extra_tags == "password" %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                    {% endif %}
+                    {% endfor %}
+                {% endif %}
+                <h5 style="font-family: 'Didact Gothic', sans-serif;">Confirm password:</h5><input type="password" class="form-control" name="confirm_password">
+            </div>        
+            <div class="form-group">
+                <button type="submit" class="btn btn-block" style="background-image: linear-gradient(#0798c4, #007da2); color:#fcfdfe; font-family: 'Didact Gothic', sans-serif;">Register Now</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="login-form">
+        <div class="col-xs-4" style="background-color:#fcfdfe; height:548px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+            <form action="/login_process" method="post">
+                {% csrf_token %}
+                <h2 class="text-center" style="font-family: 'Satisfy', cursive;">Login</h2>       
+                <div class="form-group">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.extra_tags == "email" %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    <h5 style="font-family: 'Didact Gothic', sans-serif;">Email:</5><input type="text" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.extra_tags == "password" %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    <h5 style="font-family: 'Didact Gothic', sans-serif;">Password:</h5><input type="password" class="form-control" name="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block" style="color:#fcfdfe; background-image: linear-gradient(#0798c4, #007da2); font-family: 'Didact Gothic', sans-serif;">Login</button>
+                </div>
+            </form>
+        </div>
+        <form action="/" method="GET">
+            <div class="form-group ">
+                <button type="submit" class="btn btn-block" style="color:#fcfdfe; background-color:#0084ab; margin-top: 104px; font-family: 'Alegreya Sans SC', sans-serif; font-size:20px;">back to the home page</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>          
